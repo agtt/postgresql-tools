@@ -7,11 +7,21 @@ This changes tablespace of all indexes in defined database
 >**Usage:**
 >Edit ***DB*** and ***TBLSPC*** in script and run it (./alter_index_tablespace.sh)
 
+### daily_partition.sh
+This creates daily partitioned tables which keep 7 days of table. Partitions older than 7 days are droped.
+
+>**Usage:**
+>Edit settings and run it (./daily_partition.sh)
+
 ### dbstats_tracker.sh
 Tracking growing ratios of tables and indexes by sending email according to defined ratio for PostgreSQL.
+>**Usage:** 
+>./dbstats_tracker.sh --max-ratio 1 --db dbname --user dbuser --email user@mail.com -update
 
 ### schema_tracker.sh
 Tracking any schema ddl changes in given database by sending an email of those changes for PostgreSQL.
+>**Usage:**
+>./schema_tracker.sh --db dbname --user dbuser --email user@mail.com -update
 
 ### re_seq_db.sh
 This script scan all tables in given database and fix table sequence number if there is any problem between last row id and its sequence id.
