@@ -43,3 +43,8 @@ This simple PostgreSQL backup script takes the dump file of defined database and
 
 >**Note:**
 >If you remove comments, this will erase backups older than 2 days.
+
+### partitionize.sh
+Partition a table according to given interval parameter (1 day, 1 month) which creates sub(partitionized) tables, inserts rows and creates triggers.
+>**Note:**
+>Edit settings part inside of script and run it.
